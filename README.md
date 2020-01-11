@@ -4,7 +4,5 @@
 Make localserver to make it work locally...
 ```
 ### Some Outputs:
-```
-![](./CC1.png)
-![](./RF3.png)
-```
+![Image 1](./CC1.png)
+![Image 2](./RF3.png)
