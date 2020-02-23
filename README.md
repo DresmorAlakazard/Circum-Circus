@@ -1,7 +1,7 @@
 # Circum-Circus
 ### Note:
 ```
-Make localserver to make it work locally...
+Local hosting is needed.
 ```
 ### Some Outputs:
 ![Image 1](./CC1.png)
