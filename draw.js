@@ -1,8 +1,8 @@
 const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2;
 
 async function OnLoad () {
-    var w = canvas.width  = Math.min (window.innerWidth, window.innerHeight);
-    var h = canvas.height = Math.min (window.innerWidth, window.innerHeight);
+    var w = canvas.width  = window.innerWidth; // Math.min (window.innerWidth, window.innerHeight);
+    var h = canvas.height = window.innerHeight; // Math.min (window.innerWidth, window.innerHeight);
     var gl = canvas.getContext("webgl");
 
     var vsource = await (await fetch ("vsource.vs")).text ();
@@ -56,6 +56,9 @@ async function OnLoad () {
     var u_time = gl.getUniformLocation (prog, "u_time");
     gl.uniform1f (u_time, 1.0);
 
+    var u_aspect = gl.getUniformLocation (prog, "u_aspect");
+    gl.uniform2f (u_aspect, w / h, 1.0);
+    
     // Finally
     var t = 1.0;
 
